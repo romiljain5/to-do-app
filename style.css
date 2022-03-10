@@ -1,0 +1,118 @@
+:root{
+    --font: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+body{
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+header h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+header, form{
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+form input, form button{
+    background: white;
+    border: 0px;
+    font-size: 20px;
+}
+form input{
+    width: 400px;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+}
+form button{
+    padding: 7px 15px;
+    font-size: 30px;
+    color: #fda085;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+form button:hover{
+    color: white;
+    background: #fda085;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 100px 0;
+}
+.todo{
+    list-style: none;
+    background: white;
+    display: flex;
+    min-width: 100vh;
+    margin: 5px 0;
+    transition: all 0.5s ease;
+}
+.todo-item{
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.todo li{
+    flex: 1;
+}
+.complete-btn, .trash-btn{
+    background: red;
+    color: white;
+    border: 0px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.complete-btn{
+    background: green;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    color: white;
+}
